@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="acc.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🌱 Kissan</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <div class="account-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="https://via.placeholder.com/120" alt="Profile">
+        <h2>Customer</h2>
+        <p>customer@example.com</p>
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="profile.html">👤 Profile</a></li>
+        <li>📦 Orders</li>
+        <li>🏠 Addresses</li>
+        <li>💳 Payments</li>
+        <li>❤️ Wishlist</li>
+        <li>⚙️ Settings</li>
+        <li>🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <h1>Welcome, customer 👋</h1>
+      <p>Here’s a quick look at your account.</p>
+
+      <div class="dashboard">
+        <div class="card">
+          <h3>📦 Orders</h3>
+          <p>You have 3 active orders.</p>
+          <button>View Orders</button>
+        </div>
+        <div class="card">
+          <h3>🏠 Address</h3>
+          <p>2 saved delivery addresses.</p>
+          <button>Manage</button>
+        </div>
+        <div class="card">
+          <h3>💳 Payment</h3>
+          <p>UPI & 2 saved cards.</p>
+          <button>Update</button>
+        </div>
+        <div class="card">
+          <h3>❤️ Wishlist</h3>
+          <p>5 items in wishlist.</p>
+          <button>View</button>
+        </div>
+      </div>
+
+      <!-- RECENT ORDERS -->
+      <section class="orders">
+        <h2>Recent Orders</h2>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <td>#10234</td>
+            <td>Organic Wheat</td>
+            <td>02 Sept 2025</td>
+            <td><span class="status shipped">Shipped</span></td>
+            <td>₹550</td>
+          </tr>
+          <tr>
+            <td>#10212</td>
+            <td>Fresh Mangoes</td>
+            <td>28 Aug 2025</td>
+            <td><span class="status delivered">Delivered</span></td>
+            <td>₹799</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+  </div>
+
+</body>
+</html>

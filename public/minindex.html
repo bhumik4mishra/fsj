@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kissan Connect - Login</title>
+  <link rel="stylesheet" href="ministyle.css" />
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="login-box">
+      <div class="brand">
+        <div class="brand-title">🌾 <strong>Kissan Connect</strong></div>
+        <p class="subtitle">Sign in to manage your orders, addresses and more</p>
+      </div>
+
+      <!-- Form points to Spark backend /login -->
+      <form action="/login" method="post" autocomplete="on">
+        <!-- Tiny error message, inline, no styling changes -->
+        <p style="color:red; margin:0 0 10px 0;">
+          <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('error') === '1') {
+              document.write('Invalid username or password!');
+            }
+          </script>
+        </p>
+
+        <label for="username">Your email</label>
+        <input type="email" id="username" name="username" placeholder="e.g. customer@email.com" required />
+
+        <label for="password">Your Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" name="password" placeholder="e.g. ********" required />
+          <button type="button" id="togglePassword" aria-label="Show password">Show</button>
+        </div>
+
+        <div class="form-row">
+          <label class="remember">
+            <input type="checkbox" name="remember" /> Remember me
+          </label>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">Log In</button>
+
+        <div class="login-links">
+          <a href="sign_in.html">Don't have an account? Sign up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Existing toggle password script -->
+  <script>
+    (function(){
+      const btn = document.getElementById('togglePassword');
+      const pw  = document.getElementById('password');
+      btn.addEventListener('click', function(){
+        if (pw.type === 'password') { pw.type = 'text'; btn.textContent = 'Hide'; }
+        else { pw.type = 'password'; btn.textContent = 'Show'; }
+      });
+    })();
+  </script>
+
+  <!-- NEW SCRIPT: store username in localStorage -->
+  <script>
+    const loginForm = document.querySelector('form');
+    loginForm.addEventListener('submit', function() {
+      const username = document.querySelector('#username').value; // matches your input id
+      localStorage.setItem('username', username);
+    });
+  </script>
+
+</body>
+</html>
+

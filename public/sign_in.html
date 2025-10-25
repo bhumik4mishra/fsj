@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In / Register - Kissan</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🌱 Kissan</div>
+    <ul class="nav-links">
+    </ul>
+  </nav>
+
+  <!-- SIGN IN / REGISTER CONTAINER -->
+  <div class="signin-container">
+    <div class="signin-box">
+      <h1>Create Your Account 🌱</h1>
+      <p class="subtitle">Fill in your details to join Kissan-Connect</p>
+
+      <!-- Registration Form -->
+      <form>
+        <!-- Full Name -->
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Address -->
+        <div class="input-group">
+          <label>Address</label>
+          <textarea placeholder="Enter your address" required></textarea>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="input-group">
+          <label>Date of Birth</label>
+          <input type="date" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="input-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="Enter your phone number" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" required> I agree to the Terms & Conditions</label>
+        </div>
+
+        <button type="button" class="signin-btn" onclick="window.location.href='kissan.html'">Register</button>
+
+      </form>
+
+      <p class="signup-link">Already have an account? <a href="minindex.html">Sign In</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
